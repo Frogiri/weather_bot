@@ -55,7 +55,6 @@ class OpenWeatherProvider:
         if not data:
             return []
         
-        # Группируем по дням (API даёт данные каждые 3 часа)
         forecast_by_day = {}
         for item in data["list"]:
             date = datetime.fromtimestamp(item["dt"]).date()
@@ -63,7 +62,6 @@ class OpenWeatherProvider:
                 forecast_by_day[date] = []
             forecast_by_day[date].append(item)
         
-        # Формируем прогноз
         forecast = []
         for date, items in list(forecast_by_day.items())[:days]:
             temps = [i["main"]["temp"] for i in items]
