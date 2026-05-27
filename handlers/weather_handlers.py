@@ -71,11 +71,11 @@ class WeatherHandlers:
             
             tomorrow = weather_data.forecast[1]
             text = (
-                f"📅 *Завтра в {weather_data.city}:*\n"
-                f"🌡 {tomorrow.temp_range}\n"
-                f"📝 {tomorrow.description.capitalize()}\n"
-                f"💧 Влажность: {tomorrow.humidity}%\n"
-                f"🌬 Ветер: {tomorrow.wind_speed:.1f} м/с"
+                f"*Завтра в {weather_data.city}:*\n"
+                f" {tomorrow.temp_range}\n"
+                f" {tomorrow.description.capitalize()}\n"
+                f"Влажность: {tomorrow.humidity}%\n"
+                f"Ветер: {tomorrow.wind_speed:.1f} м/с"
             )
             self.bot.send_message(chat_id, text, parse_mode="Markdown")
     

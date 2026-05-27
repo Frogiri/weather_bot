@@ -31,13 +31,13 @@ class WeatherFormatter:
             emoji = weather_emoji["thunderstorm"]
         
         return (
-            f"🏙 *{data.city}*, {data.country}\n"
-            f"{emoji} *{current.temp_celsius}* (ощущается как {current.feels_like_celsius})\n"
-            f"📝 {current.description.capitalize()}\n"
-            f"💧 Влажность: {current.humidity}%\n"
-            f"🌬 Ветер: {current.wind_speed:.1f} м/с\n"
-            f"📊 Давление: {current.pressure} гПа\n"
-            f"🕐 Обновлено: {current.timestamp.strftime('%H:%M')}"
+            f"*{data.city}*, {data.country}\n"
+            f" *{current.temp_celsius}* (ощущается как {current.feels_like_celsius})\n"
+            f"{current.description.capitalize()}\n"
+            f"Влажность: {current.humidity}%\n"
+            f"Ветер: {current.wind_speed:.1f} м/с\n"
+            f"Давление: {current.pressure} гПа\n"
+            f"Обновлено: {current.timestamp.strftime('%H:%M')}"
         )
     
     @staticmethod
@@ -58,10 +58,10 @@ class WeatherFormatter:
             
             result += (
                 f"*{day_name}* ({day.date.strftime('%d.%m')}):\n"
-                f"🌡 {day.temp_range}\n"
-                f"📝 {day.description.capitalize()}\n"
-                f"💧 Влажность: {day.humidity}%\n"
-                f"🌬 Ветер: {day.wind_speed:.1f} м/с\n\n"
+                f"{day.temp_range}\n"
+                f"{day.description.capitalize()}\n"
+                f"Влажность: {day.humidity}%\n"
+                f"Ветер: {day.wind_speed:.1f} м/с\n\n"
             )
         
         return result
