@@ -5,7 +5,7 @@ from core.weather_service import WeatherService
 from utils.formatters import WeatherFormatter
 
 def test_weather():
-    print("🔍 Проверка получения погоды...")
+    print("Проверка получения погоды...")
     
     
     cache_service = CacheService(use_redis=False)
