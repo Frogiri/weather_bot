@@ -5,11 +5,7 @@ from core.weather_provider import OpenWeatherProvider
 from core.cache_service import CacheService
 from core.weather_service import WeatherService
 from handlers.weather_handlers import WeatherHandlers
-from telebot import apihelper
 
-apihelper.proxy = {
-    'https': 'socks5://194.182.178.86:1080'
-}
 
 logger.add("logs/bot.log", rotation="1 day", retention="7 days", level="INFO")
 
